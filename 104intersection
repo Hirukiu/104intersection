@@ -25,9 +25,7 @@ def print_point(coords):
 
 
 def print_results(surface_label, solutions, Vx, Vy, Vz, Px, Py, Pz):
-    print(surface_label)
-    print("Line passing through the point ({}, {}, {}) and parallel to the vector ({}, {}, {})".format(
-        format_num(Px), format_num(Py), format_num(Pz),
+    print(surface_label)num(Pz),
         format_num(Vx), format_num(Vy), format_num(Vz),
     ))
 
