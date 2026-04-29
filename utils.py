@@ -1,5 +1,15 @@
 import math
 
+
+
+def discriminant_quadratic(a,b,c):
+    """
+    takes three numbers a, b and c and returns b² - 4ac : the
+    discriminant of the quadratic equation ax² + bx + c = 0
+    """
+
+    return ((b * b) - (4 * a * c))
+
 """
     ax² + bx + c = 0
 
@@ -22,13 +32,12 @@ import math
     x  = &(-4ca + b²) - b / 2a
 """
 
-def discriminant_quadratic(a,b,c):
-    """
-    takes three numbers a, b and c and returns b² - 4ac : the
-    discriminant of the quadratic equation ax² + bx + c = 0
-    """
 
-    return ((b * b) - (4 * a * c))
+
+
+
+
+
 
 def nb_solutions_quadratic(a, b, c):
     """
@@ -45,6 +54,8 @@ def nb_solutions_quadratic(a, b, c):
         return 1
     elif discriminant < 0:
         return 0
+
+
 
 def solutions_quadratic(a,b,c):
     """
@@ -63,6 +74,8 @@ def solutions_quadratic(a,b,c):
     elif nb == 2:
         return ([ ( -b + math.sqrt(discriminant) ) / (2 * a) , ( -b - math.sqrt(discriminant) ) / ( 2 * a ) ])
 
+
+
 def coordinates_Lt(Vx, Vy , Vz, Px, Py, Pz, t):
     """
     takes the definition of a line L (a point P and a vector P) 
@@ -76,6 +89,7 @@ def coordinates_Lt(Vx, Vy , Vz, Px, Py, Pz, t):
     coordinates = [xt, yt, zt]
 
     return coordinates
+
 
 def quadratic_equation_sphere(Vx, Vy , Vz, Px, Py, Pz, R):
     """
@@ -114,6 +128,8 @@ avec :
     c = Px² + Py² + Pz² - r²
 """
 
+
+
 def quadratic_equation_Cylinder(Vx, Vy , Vz, Px, Py, Pz, R):
     """
     takes the definition of a line (a point P and a vector V )
@@ -126,7 +142,6 @@ def quadratic_equation_Cylinder(Vx, Vy , Vz, Px, Py, Pz, R):
     c = Px ** 2 + Py ** 2 - R ** 2
     
     return solutions_quadratic(a,b,c)
-
 """
 Cylinder:
 
@@ -142,6 +157,9 @@ avec :
     c = Px² + Py² - R²
 
 """
+
+
+
 
 def quadratic_equation_cone(Vx, Vy , Vz, Px, Py, Pz, A):
     """
